@@ -13,7 +13,7 @@ import { GauComponent } from './gau.component';
 })
 
 export class AppComponent implements OnInit {
-  title = 'app works!';
+  title = 'Pun-ish those procrastinators!';
   dataTables;
   dataTable1: DataTable;
 
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
       ['Focus', 0],
       ['Procrastination', 0]
     ],
-    options: {'title': 'Tasks'}
+    options: {'title': 'User 1'}
   };
 
   barChartOptions = {
@@ -44,6 +44,7 @@ export class AppComponent implements OnInit {
       this.dataTables = dataTables;
       console.log(dataTables);
       console.log(this.dataTables);
+
       this.pieChartOptions.dataTable[1][1] = this.dataTables[0].focus;
       this.pieChartOptions.dataTable[2][1] = this.dataTables[0].procrastination;
       for (let i = 0; i < dataTables.length; i++ ) {

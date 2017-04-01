@@ -1,2 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'bootstrap.min.css';
+
+h1 {
+  text-align: center;
+}
+
+.row {
+  margin:2%;
+}
+
+customRes {
+  margin-left:100px;
+}
+
