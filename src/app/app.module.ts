@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 
 import { AppComponent } from './app.component';
+import { DataTableService } from './data-table.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { AppComponent } from './app.component';
     Ng2GoogleChartsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [DataTableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
