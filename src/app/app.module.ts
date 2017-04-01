@@ -9,11 +9,19 @@ import { AppComponent } from './app.component';
 import { DataTableService } from './data-table.service';
 import {EventsService} from "./Services/events.service";
 import {EventListComponent} from "./event-list.component";
+import {WastedTimeComponent} from "./wasted-time/wasted-time.component";
+import {ProgressIndicatorComponent} from "./progress-indicator/progress-indicator.component";
+import {HourCountComponent} from "./hour-count/hour-count.component";
+import {CompetitionComponent} from "./competition/competition.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    EventListComponent
+    EventListComponent,
+    WastedTimeComponent,
+    ProgressIndicatorComponent,
+    HourCountComponent,
+    CompetitionComponent
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { DataTable } from './data-table';
 import { DataTableService } from './data-table.service';
-import { GauComponent } from './gau.component';
-
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
   providers: [DataTableService],
 
 })
