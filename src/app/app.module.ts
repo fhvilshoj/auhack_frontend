@@ -7,10 +7,13 @@ import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 
 import { AppComponent } from './app.component';
 import { DataTableService } from './data-table.service';
+import {EventsService} from "./Services/events.service";
+import {EventListComponent} from "./event-list.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EventListComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +21,7 @@ import { DataTableService } from './data-table.service';
     Ng2GoogleChartsModule,
     HttpModule
   ],
-  providers: [DataTableService],
+  providers: [DataTableService, EventsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
