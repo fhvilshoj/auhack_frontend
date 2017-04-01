@@ -45,10 +45,11 @@ export class AppComponent implements OnInit {
       console.log(dataTables);
       console.log(this.dataTables);
       this.pieChartOptions.dataTable[1][1] = this.dataTables[0].focus;
-      this.pieChartOptions.dataTable[2][1] = this.dataTables[0].procrastination;      for (let i = 0; i < 3; i++ ) {
-        this.barChartOptions.dataTable[i+1][0] = this.dataTables[i].task;
-        this.barChartOptions.dataTable[i+1][1] = this.dataTables[i].focus;
-        this.barChartOptions.dataTable[i+1][2] = this.dataTables[i].procrastination;
+      this.pieChartOptions.dataTable[2][1] = this.dataTables[0].procrastination;
+      for (let i = 0; i < 3; i++ ) {
+        this.barChartOptions.dataTable[i + 1][0] = this.dataTables[i].task;
+        this.barChartOptions.dataTable[i + 1][1] = this.dataTables[i].focus;
+        this.barChartOptions.dataTable[i + 1][2] = this.dataTables[i].procrastination;
       }
     });
   }
