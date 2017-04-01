@@ -9,7 +9,6 @@ h1 {
   margin:2%;
 }
 
-customRes {
-  margin-left:100px;
+.bound {
+  border: 1px solid tomato;
 }
-
