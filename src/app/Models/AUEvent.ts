@@ -8,5 +8,5 @@ export class AUEvent {
   userId: string;
   procrastination: number;
   tags: string[];
-  time: Date;
+  time: string;
 }
