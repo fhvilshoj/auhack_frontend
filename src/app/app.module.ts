@@ -13,6 +13,8 @@ import {WastedTimeComponent} from "./wasted-time/wasted-time.component";
 import {ProgressIndicatorComponent} from "./progress-indicator/progress-indicator.component";
 import {HourCountComponent} from "./hour-count/hour-count.component";
 import {CompetitionComponent} from "./competition/competition.component";
+import {ServicesService} from "./Services/services.service";
+import {UsersService} from "./Services/users.service";
 
 @NgModule({
   declarations: [
@@ -29,7 +31,7 @@ import {CompetitionComponent} from "./competition/competition.component";
     Ng2GoogleChartsModule,
     HttpModule
   ],
-  providers: [DataTableService, EventsService],
+  providers: [DataTableService, EventsService, ServicesService, UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
