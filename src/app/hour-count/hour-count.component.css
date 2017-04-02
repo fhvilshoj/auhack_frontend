@@ -1,3 +1,23 @@
-h1.counter {
-  font-size: 5em;
+h1.counter span span {
+  font-size: 4em;
+}
+
+h1.counter span span.hour-tag {
+  font-size: 3em;
+}
+
+h1.counter span span.minutes-tag {
+  font-size: 2.5em;
+}
+
+h1.counter span span.minutes-cnt {
+  font-size: 2.5em;
+}
+
+h1.counter span.slack {
+  color: tomato;
+}
+
+h1.counter span.working {
+  color: green;
 }

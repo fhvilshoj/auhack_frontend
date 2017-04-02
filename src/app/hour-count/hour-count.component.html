@@ -1,7 +1,15 @@
 <div class="containter">
   <div class="col-sm-offset-1 col-md-offset-2 col-sm-10 col-md-8">
     <h1 class="counter">
-      <span class="hour-cnt">{{hours_display}}</span><span class="hour-tag">H</span>
-      <span class="minutes-cnt">{{minutes_display}}</span><span class="minutes-tag">m</span></h1>
+      <span class="working">
+        <span class="hour-cnt working">{{hours_display}}</span><span class="hour-tag">H</span>
+        <span class="minutes-cnt working">{{minutes_display}}</span><span class="minutes-tag">m</span>
+      </span>
+      -
+      <span class="slack">
+        <span class="hour-cnt">{{slack_hours}}</span><span class="hour-tag">H</span>
+        <span class="minutes-cnt">{{slack_minutes}}</span><span class="minutes-tag">m</span>
+      </span>
+    </h1>
   </div>
 </div>

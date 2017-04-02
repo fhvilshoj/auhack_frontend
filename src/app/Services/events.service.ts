@@ -15,11 +15,11 @@ export class EventsService {
 
   constructor(private http: Http){}
 
-  private addIfDate(date?: Date): string{
-    return date ? '&$filter=date gt ' + date : '';
+  private addIfDate(date?: string): string{
+    return (date && date.length > 0) ? '&$filter=date gt ' + date : '';
   }
 
-  getEventsForAllUsers(date?: Date): Promise<AUEvent[]> {
+  getEventsForAllUsers(date?: string): Promise<AUEvent[]> {
 
     return this.http.get(this.eventsUrl + this.addIfDate(date))
       .toPromise()
@@ -28,29 +28,29 @@ export class EventsService {
   }
 
 
-  getEventsForUser(userId: string,date?: Date): Promise<AUEvent[]> {
-    return this.http.get(this.eventsUrl + '?$filter userId eq' + userId+this.addIfDate(date))
+  getEventsForUser(userId: string,date?: string): Promise<AUEvent[]> {
+    return this.http.get(this.eventsUrl + '?$orderby=time%20desc&$filter userId eq' + userId+this.addIfDate(date))
       .toPromise()
       .then(response => response.json().value as AUEvent[])
       .catch(this.handleError);
   }
 
   //TODO verify that the newest is first
-  getNewest(count: number,date?: Date): Promise<AUEvent[]>{
+  getNewest(count: number,date?: string): Promise<AUEvent[]>{
     return this.http.get(this.eventsUrl+'?$orderBy=time desc&$top=' + count+this.addIfDate(date))
       .toPromise()
       .then(response => response.json().value as AUEvent[])
       .catch(this.handleError);
   }
 
-  getAllByType(type: EventType,date?: Date): Promise<AUEvent[]>{
+  getAllByType(type: EventType,date?: string): Promise<AUEvent[]>{
     return this.http.get(this.eventsUrl+'?$filter=type eq ' + EventType+this.addIfDate(date))
       .toPromise()
       .then(response => response.json().value as AUEvent[])
       .catch(this.handleError);
   }
 
-  getAllByTag(tag: string,date?: Date): Promise<AUEvent[]>{
+  getAllByTag(tag: string,date?: string): Promise<AUEvent[]>{
     return this.http.get(this.eventsUrl+'?$filter=contains('+ tag +',tags)'+this.addIfDate(date))
       .toPromise()
       .then(response => response.json().value as AUEvent[])
