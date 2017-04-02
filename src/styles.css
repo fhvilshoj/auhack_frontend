@@ -12,3 +12,29 @@ h1 {
 .bound {
   border: 1px solid tomato;
 }
+
+.pad {
+  border: 1px solid tomato;
+  margin: 5px;
+}
+
+#progress {
+  position:absolute;
+  width: 50%;
+  height:100%;
+  background-image: linear-gradient(-180deg, #0ef427 0%, #134b13 100%);
+}
+
+#progress-bar {
+  position:relative;
+  width: 100%;
+  height: 30px;
+  opacity: 0.38;
+  background-image: linear-gradient(-180deg, #FFFFFF 0%, #000000 100%);
+  border: 1px solid #979797;
+}
+
+#hours > span {
+  padding-left: 11.7%;
+  float:right;
+}

@@ -7,6 +7,8 @@ import {Component, OnInit} from '@angular/core';
 })
 
 export class ProgressIndicatorComponent implements OnInit {
+  hours = 4; // Same as in hour count
+  percentage = (this.hours / 8) * 100;
 
     constructor() {
     }
